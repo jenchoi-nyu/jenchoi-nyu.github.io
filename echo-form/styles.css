@@ -28,7 +28,7 @@ body, html {
   top: 0;
   left: 0;
   width: 100%;
-  height: 120px;
+  height: 180px;
   background-color: black;
   display: flex;
   justify-content: space-between;
@@ -40,6 +40,11 @@ body, html {
 .navbar h1 {
   color: white;
   font-size: 36px;
+}
+
+/* Link Styling for Logo */
+.logo-link {
+  text-decoration: none;
 }
 
 .experience-button {
