@@ -8,10 +8,18 @@
 body, html {
   height: 100%;
   font-family: 'Roboto Mono', monospace;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #fff;
+}
+
+/* Fullscreen Background Image */
+.bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  z-index: -1;
 }
 
 /* Top Navigation Bar */
@@ -34,76 +42,40 @@ body, html {
   font-size: 36px;
 }
 
-/* Link Styling for Logo */
-.logo-link {
-  text-decoration: none;
-}
-
-.experience-container {
-  text-align: center;
-  padding-top: 120px; /* Adjust for navbar */
-}
-
-.main-title {
-  font-size: 48px;
-  font-weight: bold;
-  color: black;
-  margin-bottom: 20px;
-}
-
-.secondary-title {
-  font-size: 24px;
-  color: black;
-  margin-bottom: 50px;
-}
-
-.start-button {
+.experience-button {
   background-color: transparent;
   color: white;
   border: 2px solid white;
-  padding: 20px 40px;
-  font-size: 24px;
+  padding: 10px 20px;
+  font-size: 18px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-.start-button:hover {
+.experience-button:hover {
   background-color: white;
   color: black;
 }
 
-.countdown {
-  font-size: 48px;
-  color: black;
-  font-weight: bold;
-}
-
+/* Responsiveness */
 @media (max-width: 768px) {
-  .main-title {
-    font-size: 36px;
+  .navbar h1 {
+    font-size: 28px;
   }
 
-  .secondary-title {
-    font-size: 18px;
-  }
-
-  .start-button {
-    font-size: 20px;
-    padding: 15px 30px;
+  .experience-button {
+    font-size: 16px;
+    padding: 8px 16px;
   }
 }
 
 @media (max-width: 480px) {
-  .main-title {
-    font-size: 28px;
+  .navbar h1 {
+    font-size: 24px;
   }
 
-  .secondary-title {
-    font-size: 16px;
-  }
-
-  .start-button {
-    font-size: 18px;
-    padding: 12px 24px;
+  .experience-button {
+    font-size: 14px;
+    padding: 6px 12px;
   }
 }
