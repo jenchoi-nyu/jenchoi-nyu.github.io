@@ -11,13 +11,26 @@ body, html {
   font-family: 'Roboto Mono', monospace;
 }
 
+/* Fullscreen Background Image */
+.bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  z-index: -1;
+}
+
 /* Top Navigation Bar */
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100px;
+  height: 120px;
+  background-color: black;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -28,6 +41,26 @@ body, html {
 .navbar h1 {
   color: white;
   font-size: 36px;
+}
+
+/* Link Styling for Logo */
+.logo-link {
+  text-decoration: none;
+}
+
+.experience-button {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.experience-button:hover {
+  background-color: white;
+  color: black;
 }
 
 /* Experience Page Content */
