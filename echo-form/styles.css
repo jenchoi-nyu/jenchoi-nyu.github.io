@@ -8,34 +8,6 @@
 body, html {
   height: 100%;
   font-family: 'Roboto Mono', monospace;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #fff;
-}
-
-/* Full Screen Background */
-.background-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('bg.jpg');
-  background-size: cover;
-  background-position: center;
-  z-index: -1;
-}
-
-/* Optional: Background Video */
-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
 }
 
 /* Top Navigation Bar */
@@ -58,81 +30,60 @@ video {
   font-size: 36px;
 }
 
-.logo-link {
-  text-decoration: none;
+/* Experience Page Content */
+.experience-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
 }
 
-/* Bottom Left Text */
-.bottom-left-text {
-  position: absolute;
-  left: 20px;
-  bottom: 20px;
-  color: white;
-  text-align: left;
+/* Centering content */
+.content {
+  text-align: center;
 }
 
-.bottom-left-text h1 {
-  font-size: 48px;
-  margin-bottom: 10px;
+/* Main Title */
+.main-title {
+  font-size: 36px;
+  margin-bottom: 20px;
 }
 
-.bottom-left-text p {
+/* Secondary Title */
+.secondary-title {
   font-size: 18px;
-  max-width: 700px;  /* Adjusted to double the original width */
-  line-height: 1.6;
+  margin-bottom: 40px;
 }
 
-/* Experience Button */
-.experience-button-container {
-  position: absolute;
-  right: 20px;
-  bottom: 20px;
-}
-
-.experience-button {
+/* Start Button */
+.start-button {
+  font-size: 20px;
+  padding: 15px 30px;
   background-color: black;
   color: white;
-  padding: 15px 30px;
-  font-size: 20px;
-  text-decoration: none;
   border: 2px solid white;
+  cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-.experience-button:hover {
+.start-button:hover {
   background-color: white;
   color: black;
 }
 
-/* Media Query for Responsiveness */
-@media (max-width: 768px) {
-  .bottom-left-text h1 {
-    font-size: 32px;
-  }
-
-  .bottom-left-text p {
-    font-size: 16px;
-    max-width: 600px;  /* Adjusted for responsiveness */
-  }
-
-  .experience-button {
-    font-size: 18px;
-    padding: 12px 24px;
-  }
+/* Countdown Fullscreen */
+.countdown {
+  position: absolute;
+  top: 120px; /* Exclude the top nav */
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 120px); /* Fullscreen minus the navbar */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  font-size: 100px;
 }
 
-@media (max-width: 480px) {
-  .bottom-left-text h1 {
-    font-size: 28px;
-  }
-
-  .bottom-left-text p {
-    font-size: 14px;
-    max-width: 400px;  /* Adjusted for small screens */
-  }
-
-  .experience-button {
-    font-size: 16px;
-    padding: 10px 20px;
-  }
-}
