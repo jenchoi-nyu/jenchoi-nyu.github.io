@@ -26,9 +26,9 @@
       <!-- Start Button -->
       <button id="startButton" class="start-button">Start</button>
 
-      <!-- Countdown -->
+      <!-- Countdown with message -->
       <div id="countdown" class="countdown" style="display: none;">
-        <h3>3</h3>
+        <h3>Say your full name in <span id="countdown-number">3</span>!</h3>
       </div>
     </div>
   </div>
@@ -37,6 +37,7 @@
     // Countdown Animation Logic
     const startButton = document.getElementById("startButton");
     const countdown = document.getElementById("countdown");
+    const countdownNumber = document.getElementById("countdown-number");
 
     startButton.addEventListener("click", () => {
       // Hide the start button and show the countdown
@@ -45,7 +46,7 @@
 
       let count = 3;
       const countdownInterval = setInterval(() => {
-        countdown.querySelector("h3").textContent = count;
+        countdownNumber.textContent = count;
         count--;
 
         if (count < 0) {
