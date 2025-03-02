@@ -62,22 +62,6 @@ video {
   text-decoration: none;
 }
 
-/* Experience Button in the top nav */
-.experience-button {
-  background-color: black;
-  color: white;
-  padding: 15px 30px;
-  font-size: 20px;
-  text-decoration: none;
-  border: 2px solid white;
-  transition: background-color 0.3s ease;
-}
-
-.experience-button:hover {
-  background-color: white;
-  color: black;
-}
-
 /* Bottom Left Text */
 .bottom-left-text {
   position: absolute;
@@ -94,8 +78,30 @@ video {
 
 .bottom-left-text p {
   font-size: 18px;
-  max-width: 350px;
+  max-width: 700px;  /* Adjusted to double the original width */
   line-height: 1.6;
+}
+
+/* Experience Button */
+.experience-button-container {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+
+.experience-button {
+  background-color: black;
+  color: white;
+  padding: 15px 30px;
+  font-size: 20px;
+  text-decoration: none;
+  border: 2px solid white;
+  transition: background-color 0.3s ease;
+}
+
+.experience-button:hover {
+  background-color: white;
+  color: black;
 }
 
 /* Media Query for Responsiveness */
@@ -106,7 +112,7 @@ video {
 
   .bottom-left-text p {
     font-size: 16px;
-    max-width: 300px;
+    max-width: 600px;  /* Adjusted for responsiveness */
   }
 
   .experience-button {
@@ -122,7 +128,7 @@ video {
 
   .bottom-left-text p {
     font-size: 14px;
-    max-width: 250px;
+    max-width: 400px;  /* Adjusted for small screens */
   }
 
   .experience-button {
