@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Experience Echo + Form</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <nav class="navbar">
+    <a href="index.html" class="logo-link"><h1>Echo + Form</h1></a>
+  </nav>
+
+  <!-- Experience Page Content -->
+  <div class="experience-container">
+    <div class="content">
+      <!-- Main Title -->
+      <h1 class="main-title">Transform Your Voice into Form</h1>
+
+      <!-- Secondary Title -->
+      <h2 class="secondary-title">Press the start button and say your full name after the countdown.</h2>
+
+      <!-- Start Button -->
+      <button id="startButton" class="start-button">Start</button>
+
+      <!-- Countdown -->
+      <div id="countdown" class="countdown" style="display: none;">
+        <h3>3</h3>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Countdown Animation Logic
+    const startButton = document.getElementById("startButton");
+    const countdown = document.getElementById("countdown");
+
+    startButton.addEventListener("click", () => {
+      // Hide the start button and show the countdown
+      startButton.style.display = "none";
+      countdown.style.display = "block";
+
+      let count = 3;
+      const countdownInterval = setInterval(() => {
+        countdown.querySelector("h3").textContent = count;
+        count--;
+
+        if (count < 0) {
+          clearInterval(countdownInterval);
+          countdown.style.display = "none";
+          // You can add logic here to start recording the voice
+        }
+      }, 1000); // Update every second
+    });
+  </script>
+
+</body>
+</html>
