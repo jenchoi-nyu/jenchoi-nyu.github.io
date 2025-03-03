@@ -102,9 +102,9 @@ body, html {
 
 /* Main Title */
 .main-title {
-  font-size: 36px;
+  font-size: 68px;
   font-weight: bold;
-  margin-bottom: 36px;
+  margin-bottom: 48px;
 }
 
 /* Start Button */
@@ -126,6 +126,7 @@ body, html {
 /* Countdown Fullscreen */
 .countdown {
   position: absolute;
+  width: 100%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
