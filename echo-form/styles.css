@@ -107,12 +107,6 @@ body, html {
   margin-bottom: 36px;
 }
 
-/* Secondary Title */
-.secondary-title {
-  font-size: 24px;
-  margin-bottom: 50px;
-}
-
 /* Start Button */
 .start-button {
   background-color: transparent;
@@ -132,8 +126,8 @@ body, html {
 /* Countdown Fullscreen */
 .countdown {
   position: absolute;
-  top: 100%;
-  left: 100%;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
   font-size: 82px;
   font-weight: bold;
