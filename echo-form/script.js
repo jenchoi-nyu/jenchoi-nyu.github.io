@@ -4,7 +4,6 @@ const countdown = document.getElementById("countdown");
 const countdownNumber = document.getElementById("countdown-number");
 let countdownInterval;
 let p5Started = false;
-let canvasInstance;
 
 startButton.addEventListener("click", () => {
   // Hide the start button and show the countdown
@@ -32,17 +31,7 @@ startButton.addEventListener("click", () => {
 function startP5Sketch() {
   const canvasContainer = document.getElementById("p5-canvas-container");
   canvasContainer.style.display = "block";
-  canvasInstance = new p5(sketch, canvasContainer);
-}
-
-// Function to restart the experience
-function restartExperience() {
-  if (canvasInstance) {
-    canvasInstance.remove();
-  }
-  p5Started = false;
-  startButton.style.display = "block";
-  document.getElementById("p5-canvas-container").style.display = "none";
+  new p5(sketch, canvasContainer);
 }
 
 // p5.js sketch
@@ -111,6 +100,7 @@ const sketch = (p) => {
         p.endShape(p.CLOSE);
       }
     }
+  };
 
   p.keyPressed = function () {
     if (p.keyCode === 32) {
@@ -119,9 +109,6 @@ const sketch = (p) => {
     if (p.keyCode === p.ENTER) {
       // Save the canvas as a PNG when Enter key is pressed
       p.saveCanvas('screenshot', 'png');
-    }
-    if (p.keyCode === p.ESCAPE) {
-      restartExperience(); // Restart the experience on Escape key press
     }
   };
 };
