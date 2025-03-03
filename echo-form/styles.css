@@ -75,7 +75,7 @@ body, html {
 .bottom-left-text {
   position: relative; /* Removes absolute positioning */
   padding: 50px 30px;
-  max-width: 720px;
+  max-width: 760px;
 }
 
 .bottom-left-text h1 {
