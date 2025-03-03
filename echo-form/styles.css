@@ -6,17 +6,80 @@
   font-family: 'Roboto Mono', monospace;
 }
 
+
 body, html {
   height: 100%;
+  color: white; 
   background-color: black; /* Set entire page background to black */
   color: white; /* Set text color to white */
 }
 
+/* Fullscreen Background Image */
+.background-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+
+}
+
+/* Top Navigation Bar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-color: black;
 /* Experience Page Content */
 .experience-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0 20px;
+  z-index: 1;
+}
+
+.navbar h1 {
+  color: white;
+  font-size: 36px;
+}
+
+/* Experience Button (Top Right) */
+.experience-button {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.experience-button:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Bottom Left Text */
+.bottom-left-text {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  max-width: 760px;
+}
+
+.bottom-left-text h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.bottom-left-text p {
+  font-size: 18px;
+  line-height: 1.6;
   height: 100vh; /* Full screen height */
   text-align: center;
   flex-direction: column;
@@ -26,12 +89,14 @@ body, html {
 .main-title {
   font-size: 48px;
   font-weight: bold;
+  color: black;
   margin-bottom: 20px;
 }
 
 /* Secondary Title */
 .secondary-title {
   font-size: 24px;
+  color: black;
   margin-bottom: 50px;
 }
 
@@ -39,24 +104,57 @@ body, html {
 .start-button {
   background-color: transparent;
   color: white;
-  border: 2px solid white;
-  padding: 20px 40px;
-  font-size: 24px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.start-button:hover {
-  background-color: white;
+@@ -105,47 +51,12 @@ body, html {
   color: black;
 }
 
 /* Countdown Fullscreen */
 .countdown {
+  font-size: 48px;
+  color: black;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 82px;
   font-weight: bold;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .navbar h1 {
+    font-size: 28px;
+  }
+
+  .experience-button {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+
+  .bottom-left-text h1 {
+    font-size: 26px;
+  }
+
+  .bottom-left-text p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar h1 {
+    font-size: 24px;
+  }
+
+  .experience-button {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+
+  .bottom-left-text h1 {
+    font-size: 22px;
+  }
+
+  .bottom-left-text p {
+    font-size: 14px;
+  }
 }
