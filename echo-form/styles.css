@@ -16,6 +16,7 @@ body, html {
   position: relative;
   width: 100%;
   height: 100vh; /* Full viewport height */
+  background: black; 
 }
 
 /* Adjust Background Image */
@@ -74,8 +75,8 @@ body, html {
 .bottom-left-text {
   position: relative; /* Removes absolute positioning */
   padding: 50px 30px;
-  max-width: 680px;
-  background: black; /* Optional: Add a background for readability */
+  max-width: 720px;
+  background: black; 
 }
 
 .bottom-left-text h1 {
