@@ -6,12 +6,9 @@
   font-family: 'Roboto Mono', monospace;
 }
 
-
 body, html {
   height: 100%;
   color: white; 
-  background-color: black; /* Set entire page background to black */
-  color: white; /* Set text color to white */
 }
 
 /* Fullscreen Background Image */
@@ -32,12 +29,10 @@ body, html {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100px;
+  height: 120px;
   background-color: black;
-/* Experience Page Content */
-.experience-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   padding: 0 20px;
   z-index: 1;
@@ -80,12 +75,8 @@ body, html {
 .bottom-left-text p {
   font-size: 18px;
   line-height: 1.6;
-  height: 100vh; /* Full screen height */
-  text-align: center;
-  flex-direction: column;
 }
 
-/* Main Title */
 .main-title {
   font-size: 48px;
   font-weight: bold;
@@ -93,30 +84,30 @@ body, html {
   margin-bottom: 20px;
 }
 
-/* Secondary Title */
 .secondary-title {
   font-size: 24px;
   color: black;
   margin-bottom: 50px;
 }
 
-/* Start Button */
 .start-button {
   background-color: transparent;
   color: white;
-@@ -105,47 +51,12 @@ body, html {
+  border: 2px solid white;
+  padding: 20px 40px;
+  font-size: 24px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.start-button:hover {
+  background-color: white;
   color: black;
 }
 
-/* Countdown Fullscreen */
 .countdown {
   font-size: 48px;
   color: black;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 82px;
   font-weight: bold;
 }
 
