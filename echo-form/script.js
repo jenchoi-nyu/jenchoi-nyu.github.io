@@ -112,18 +112,6 @@ const sketch = (p) => {
       }
     }
 
-    // Draw instructions text
-    p.fill(0, 150);
-    p.noStroke();
-    p.rect(-p.width / 2 + 10, p.height / 2 - 60, 300, 50);
-    p.fill(255);
-    p.textSize(14);
-    p.textAlign(p.LEFT, p.BOTTOM);
-    p.text("SPACE key = Start/Stop", -p.width / 2 + 20, p.height / 2 - 40);
-    p.text("RETURN key = Screenshot", -p.width / 2 + 20, p.height / 2 - 25);
-    p.text("ESC key = Start Over", -p.width / 2 + 20, p.height / 2 - 10);
-  };
-
   p.keyPressed = function () {
     if (p.keyCode === 32) {
       growing = !growing; // Toggle growth state on Spacebar press
