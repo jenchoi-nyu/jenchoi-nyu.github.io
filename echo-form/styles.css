@@ -4,11 +4,11 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto Mono', monospace;
-  color: white; 
 }
 
 body, html {
   height: 100%;
+  color: white; 
 }
 
 /* Fullscreen Background Image */
@@ -64,7 +64,7 @@ body, html {
   position: absolute;
   bottom: 30px;
   left: 30px;
-  max-width: 600px;
+  max-width: 620px;
 }
 
 .bottom-left-text h1 {
