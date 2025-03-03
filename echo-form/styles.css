@@ -4,12 +4,12 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto Mono', monospace;
-  background: black; 
 }
 
 body, html {
   height: 100%;
   color: white; 
+  background: black; 
 }
 
 /* Wrap background and nav in a container */
