@@ -1,3 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Echo + Form</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Uncomment this section if you want a background video -->
+  <!--
+  <video autoplay muted loop id="background-video">
+    <source src="your-video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  -->
+
+  <div class="container">
+    <!-- Top Navigation Bar -->
+    <nav class="navbar">
+      <h1>Echo + Form</h1>
+      <button class="experience-button">Experience It</button>
+    </nav>
+
+    <!-- Background Image -->
+    <div class="bg-image"></div>
+  </div>
+</body>
+</html>
+CSS (styles.css)
 /* Universal styling */
 * {
   margin: 0;
@@ -19,7 +50,6 @@ body, html {
   height: 100%;
   background: url('bg.jpg') no-repeat center center fixed;
   background-size: cover;
-  background-color: black;
   z-index: -1;
 }
 
@@ -43,11 +73,6 @@ body, html {
   font-size: 36px;
 }
 
-/* Link Styling for Logo */
-.logo-link {
-  text-decoration: none;
-}
-
 .experience-button {
   background-color: transparent;
   color: white;
@@ -59,8 +84,31 @@ body, html {
 }
 
 .experience-button:hover {
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .navbar h1 {
+    font-size: 28px;
+  }
+
+  .experience-button {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar h1 {
+    font-size: 24px;
+  }
+
+  .experience-button {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
 }
 
 /* Experience Page Content */
