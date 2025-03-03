@@ -3,13 +3,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Roboto Mono', monospace;
+  background-color: black; 
+  color: white; 
 }
 
 body, html {
   height: 100%;
-  font-family: 'Roboto Mono', monospace;
-  background-color: black; /* Set global background to black */
-  color: white; /* Set default text color to white */
 }
 
 /* Fullscreen Background Image */
