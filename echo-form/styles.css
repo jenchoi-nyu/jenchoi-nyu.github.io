@@ -77,6 +77,40 @@ body, html {
   line-height: 1.6;
 }
 
+.main-title {
+  font-size: 48px;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.secondary-title {
+  font-size: 24px;
+  color: black;
+  margin-bottom: 50px;
+}
+
+.start-button {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  padding: 20px 40px;
+  font-size: 24px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.start-button:hover {
+  background-color: white;
+  color: black;
+}
+
+.countdown {
+  font-size: 48px;
+  color: black;
+  font-weight: bold;
+}
+
 /* Responsiveness */
 @media (max-width: 768px) {
   .navbar h1 {
