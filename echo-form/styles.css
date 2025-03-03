@@ -77,19 +77,30 @@ body, html {
   line-height: 1.6;
 }
 
+/* Experience Page Content */
+.experience-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full screen height */
+  text-align: center;
+  flex-direction: column;
+}
+
+/* Main Title */
 .main-title {
   font-size: 48px;
   font-weight: bold;
-  color: black;
   margin-bottom: 20px;
 }
 
+/* Secondary Title */
 .secondary-title {
   font-size: 24px;
-  color: black;
   margin-bottom: 50px;
 }
 
+/* Start Button */
 .start-button {
   background-color: transparent;
   color: white;
@@ -105,10 +116,15 @@ body, html {
   color: black;
 }
 
+/* Countdown Fullscreen */
 .countdown {
-  font-size: 48px;
-  color: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 82px;
   font-weight: bold;
+}
 }
 
 /* Responsiveness */
