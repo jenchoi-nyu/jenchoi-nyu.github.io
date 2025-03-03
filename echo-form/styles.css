@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto Mono', monospace;
+  background: black; 
 }
 
 body, html {
@@ -76,7 +77,6 @@ body, html {
   position: relative; /* Removes absolute positioning */
   padding: 50px 30px;
   max-width: 720px;
-  background: black; 
 }
 
 .bottom-left-text h1 {
