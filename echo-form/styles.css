@@ -97,7 +97,7 @@ body, html {
 .main-title {
   font-size: 32px;
   font-weight: bold;
-  margin-bottom: 80px;
+  margin-bottom: 64px;
 }
 
 /* Secondary Title */
@@ -130,7 +130,7 @@ body, html {
   transform: translate(-50%, -50%);
   font-size: 82px;
   font-weight: bold;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.8);
 }
 }
 
