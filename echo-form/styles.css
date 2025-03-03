@@ -43,6 +43,10 @@ body, html {
   font-size: 36px;
 }
 
+.navbar a {
+  text-decoration: none;
+}
+
 /* Experience Button (Top Right) */
 .experience-button {
   background-color: transparent;
