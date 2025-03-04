@@ -79,13 +79,11 @@ body, html {
 }
 
 .bottom-left-text h1 {
- font-family: 'Inter', sans-serif;
- font-size: 2.5rem;
+ font-size: 2rem;
  margin-bottom: 20px;
 }
 
 .bottom-left-text p {
-  font-family: 'Inter', sans-serif;
   font-size: 1.2rem;
   line-height: 1.6;
 }
