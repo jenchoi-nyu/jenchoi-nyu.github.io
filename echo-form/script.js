@@ -110,5 +110,12 @@ const sketch = (p) => {
       // Save the canvas as a PNG when Enter key is pressed
       p.saveCanvas('screenshot', 'png');
     }
+    if (p.keyCode === p.ESCAPE) {
+      // Reset the growing effect and clear path on ESC press
+      path = [];
+      currentLayer = 0;
+      startTime = p.millis(); // Reset timer to restart
+      growing = true;
+    }
   };
 };
