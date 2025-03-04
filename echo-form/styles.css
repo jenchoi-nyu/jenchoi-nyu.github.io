@@ -73,6 +73,7 @@ body, html {
 
 /* Bottom Left Text */
 .bottom-left-text {
+  font-family: 'Inter', sans-serif;
   position: relative; /* Removes absolute positioning */
   padding: 50px 30px;
   max-width: 1120px;
@@ -84,7 +85,6 @@ body, html {
 }
 
 .bottom-left-text p {
-  font-family: 'Inter', sans-serif;
   font-size: 18px;
   line-height: 1.6;
 }
