@@ -41,7 +41,7 @@ function startP5Sketch() {
 const sketch = (p) => {
   let mic, fft;
   let path = []; 
-  const maxRadius = 200, maxHeight = 400, numSides = 30, maxLayers = 300;
+  const maxRadius = 200, maxHeight = 500, numSides = 30, maxLayers = 300;
   let currentLayer = 0; // Controls when new layers appear
   let startTime;  // Variable to store the start time
   let growing = true; // Flag to control growth
