@@ -2,6 +2,7 @@
 const startButton = document.getElementById("startButton");
 const countdown = document.getElementById("countdown");
 const countdownNumber = document.getElementById("countdown-number");
+const keyboardInstructions = document.getElementById("keyboardInstructions");
 let countdownInterval;
 let p5Started = false;
 
@@ -22,6 +23,8 @@ startButton.addEventListener("click", () => {
       if (!p5Started) {
         p5Started = true;
         startP5Sketch();
+        // Show the keyboard instructions after the countdown
+        keyboardInstructions.style.display = "block";
       }
     }
   }, 1000); // Update every second
