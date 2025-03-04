@@ -64,8 +64,14 @@ const sketch = (p) => {
     let centroid = fft.getCentroid();
     let volume = mic.getLevel();
 
-    // Only start drawing after 1 second has passed
-    if (p.millis() - startTime > 1000 && growing) { // 1 second has passed
+    // Check if we have reached the max height
+    let currentHeight = path.length > 0 ? path[path.length - 1][0].z : 0;
+    if (currentHeight >= maxHeight) {
+      growing = false; // Stop adding new layers when maxHeight is reached
+    }
+
+    // Only start drawing after 1 second has passed and while growing
+    if (p.millis() - startTime > 1000 && growing) { 
       let radius = p.constrain(p.map(centroid, 500, 15000, 50, maxRadius), 50, maxRadius);
       let zOffset = path.length > 0 ? path[path.length - 1][0].z + p.map(volume, 0, 1, 10, 10) : 0;
 
