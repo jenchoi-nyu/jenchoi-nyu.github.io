@@ -78,13 +78,13 @@ body, html {
 }
 
 .bottom-left-text h1 {
- font-size: 2rem;
- margin-bottom: 20px;
+ font-size: 1.8rem;
+ margin-bottom: 16px;
 }
 
 .bottom-left-text p {
-  font-size: 1.2rem;
-  line-height: 1.6;
+  font-size: 1rem;
+  line-height: 1.4;
 }
 
 /* Experience Page */
