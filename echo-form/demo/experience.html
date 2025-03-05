@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Experience Echo + Form</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Load p5.js and script.js -->
+  <script src="http://jenchoi-nyu.github.io/echo-form/libs/p5.js"></script>
+  <script src="http://jenchoi-nyu.github.io/echo-form/libs/p5.sound.js"></script> 
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- Top Navigation Bar -->
+  <nav class="navbar">
+    <a href="index.html" class="logo-link"><h1>Echo + Form</h1></a>
+  </nav>
+
+  <!-- Experience Page Content -->
+  <div class="experience-container">
+    <div class="content">
+      <h1 class="main-title">Speak Your Name<br>to Shape the Form</h1>
+
+      <!-- Start Button -->
+      <button id="startButton" class="action-button">Start Recording</button>
+
+      <!-- Countdown -->
+      <div id="countdown" class="countdown" style="display: none;">
+        <h5>Speak Your Name in</h5><h1><span id="countdown-number">3</span></h1>
+      </div>
+
+<!-- Buttons Overlay (Now inside .controls) -->
+<div id="controls" class="controls" style="display: none;">
+  <button id="stopResumeButton" class="action-button">Stop</button>
+  <button id="resetButton" class="action-button">Reset</button>
+  <button id="screenshotButton" class="action-button">Screenshot</button>
+</div>
+
+<!-- p5.js Canvas Container (Now full-screen) -->
+<div id="p5-canvas-container" class="canvas-container" style="display: none;"></div>
+
+
+</body>
+</html>
