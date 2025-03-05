@@ -37,89 +37,92 @@ startButton.addEventListener("click", () => {
 function startP5Sketch() {
   const canvasContainer = document.getElementById("p5-canvas-container");
   canvasContainer.style.display = "block";
-  new p5(sketch, canvasContainer);
-}
 
-// p5.js Sketch
-const sketch = (p) => {
-  let mic, fft;
-  let path = [];
-  const maxHeight = 500, numSides = 30, maxLayers = 300;
-  let currentLayer = 0;
-  let startTime;
+  new p5((p) => {
+    let mic, fft;
+    let path = [];
+    const maxHeight = 500, numSides = 15, maxLayers = 100;
+    let currentLayer = 0;
+    let startTime;
 
-  p.setup = function () {
-   p.createCanvas(p.windowWidth, p.windowHeight, p.P2D);
-    mic = new p5.AudioIn();
-    mic.start();
-    fft = new p5.FFT();
-    fft.setInput(mic);
-    startTime = p.millis();
-  };
+    p.setup = function () {
+      p.createCanvas(p.windowWidth, p.windowHeight, p.P2D); // Use P2D instead of WEBGL for better compatibility
 
-  p.draw = function () {
-    p.background(200);
-    p.orbitControl();
+      p.userStartAudio().then(() => {
+        mic = new p5.AudioIn();
+        mic.start();
+        fft = new p5.FFT();
+        fft.setInput(mic);
+      }).catch(err => console.warn("Audio context error:", err));
 
-    let spectrum = fft.analyze();
-    let centroid = fft.getCentroid();
-    let volume = mic.getLevel();
+      startTime = p.millis();
+    };
 
-    let currentHeight = path.length > 0 ? path[path.length - 1][0].z : 0;
-    if (currentHeight >= maxHeight) {
-      growing = false;
-    }
+    p.draw = function () {
+      p.background(200);
 
-    if (p.millis() - startTime > 1000 && growing) {
-      let radius = p.constrain(p.map(centroid, 500, 15000, 50, 200), 50, 200);
-      let zOffset = path.length > 0 ? path[path.length - 1][0].z + p.map(volume, 0, 1, 10, 10) : 0;
+      if (!mic) return; // Prevent crashes if audio isn't initialized
 
-      if (p.frameCount % 5 === 0 && path.length < maxLayers) {
-        let newRing = [];
-        for (let i = 0; i < numSides; i++) {
-          let theta = p.map(i, 0, numSides, 0, p.TWO_PI);
-          let x = radius * p.cos(theta);
-          let y = radius * p.sin(theta) + 200;
-          newRing.push(p.createVector(x, y, zOffset));
+      let spectrum = fft.analyze();
+      let centroid = fft.getCentroid();
+      let volume = mic.getLevel();
+
+      let currentHeight = path.length > 0 ? path[path.length - 1][0].z : 0;
+      if (currentHeight >= maxHeight) {
+        growing = false;
+      }
+
+      if (p.millis() - startTime > 1000 && growing) {
+        let radius = p.constrain(p.map(centroid, 500, 15000, 50, 200), 50, 200);
+        let zOffset = path.length > 0 ? path[path.length - 1][0].z + p.map(volume, 0, 1, 10, 10) : 0;
+
+        if (p.frameCount % 10 === 0 && path.length < maxLayers) { // Slower updates for better performance
+          let newRing = [];
+          for (let i = 0; i < numSides; i++) {
+            let theta = p.map(i, 0, numSides, 0, p.TWO_PI);
+            let x = radius * p.cos(theta);
+            let y = radius * p.sin(theta) + 200;
+            newRing.push(p.createVector(x, y, zOffset));
+          }
+          path.push(newRing);
+          currentLayer++;
         }
-        path.push(newRing);
-        currentLayer++;
       }
-    }
 
-    p.noFill();
-    p.stroke(0);
+      p.noFill();
+      p.stroke(0);
 
-    for (let i = 1; i < path.length; i++) {
-      let prevRing = path[i - 1];
-      let currRing = path[i];
+      for (let i = 1; i < path.length; i++) {
+        let prevRing = path[i - 1];
+        let currRing = path[i];
 
-      for (let j = 0; j < numSides; j++) {
-        let next = (j + 1) % numSides;
+        for (let j = 0; j < numSides; j++) {
+          let next = (j + 1) % numSides;
 
-        p.beginShape();
-        p.vertex(prevRing[j].x, prevRing[j].y, prevRing[j].z);
-        p.vertex(prevRing[next].x, prevRing[next].y, prevRing[next].z);
-        p.vertex(currRing[next].x, currRing[next].y, currRing[next].z);
-        p.vertex(currRing[j].x, currRing[j].y, currRing[j].z);
-        p.endShape(p.CLOSE);
+          p.beginShape();
+          p.vertex(prevRing[j].x, prevRing[j].y);
+          p.vertex(prevRing[next].x, prevRing[next].y);
+          p.vertex(currRing[next].x, currRing[next].y);
+          p.vertex(currRing[j].x, currRing[j].y);
+          p.endShape(p.CLOSE);
+        }
       }
-    }
-  };
+    };
 
-  stopResumeButton.addEventListener("click", () => {
-    growing = !growing;
-    stopResumeButton.textContent = growing ? "Stop" : "Resume";
-  });
+    stopResumeButton.addEventListener("click", () => {
+      growing = !growing;
+      stopResumeButton.textContent = growing ? "Stop" : "Resume";
+    });
 
-  resetButton.addEventListener("click", () => {
-    path = [];
-    currentLayer = 0;
-    startTime = p.millis();
-    growing = true;
-  });
+    resetButton.addEventListener("click", () => {
+      path = [];
+      currentLayer = 0;
+      startTime = p.millis();
+      growing = true;
+    });
 
-  screenshotButton.addEventListener("click", () => {
-    p.saveCanvas('screenshot', 'png');
-  });
-};
+    screenshotButton.addEventListener("click", () => {
+      p.saveCanvas('screenshot', 'png');
+    });
+  }, canvasContainer);
+}
