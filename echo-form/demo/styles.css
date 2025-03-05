@@ -36,6 +36,57 @@ body, html {
 .navbar a {
   text-decoration: none;
 }
+/* Wrap background and nav in a container */
+.content-container {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+}
+
+/* Adjust Background Image */
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: url('bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  z-index: 1;
+}
+
+/* Experience Button (Top Right) */
+.experience-button {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.experience-button:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Bottom Left Text */
+.bottom-left-text {
+  position: relative; /* Removes absolute positioning */
+  padding: 50px 30px;
+  max-width: 1120px;
+}
+
+.bottom-left-text h1 {
+ font-size: 2rem;
+ margin-bottom: 20px;
+}
+
+.bottom-left-text p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
 
 /* Experience Page */
 .experience-container {
