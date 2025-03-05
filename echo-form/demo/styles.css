@@ -10,7 +10,6 @@
 body, html {
   height: 100%;
   color: white;
-  overflow: hidden; /* Prevents scrolling */
 }
 
 /* Navigation Bar */
