@@ -49,7 +49,7 @@ const sketch = (p) => {
   let startTime;
 
   p.setup = function () {
-    p.createCanvas(p.windowWidth, p.windowHeight, p.P2D);
+    p.createCanvas(p.windowWidth, p.windowHeight, p.WEBGL);
     mic = new p5.AudioIn();
     mic.start();
     fft = new p5.FFT();
