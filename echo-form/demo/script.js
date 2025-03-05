@@ -44,7 +44,7 @@ function startP5Sketch() {
 const sketch = (p) => {
   let mic, fft;
   let path = [];
-  const maxHeight = 500, numSides = 30, maxLayers = 300;
+  const maxHeight = 500, numSides = 15, maxLayers = 100;
   let currentLayer = 0;
   let startTime;
 
@@ -74,7 +74,7 @@ const sketch = (p) => {
       let radius = p.constrain(p.map(centroid, 500, 15000, 50, 200), 50, 200);
       let zOffset = path.length > 0 ? path[path.length - 1][0].z + p.map(volume, 0, 1, 10, 10) : 0;
 
-      if (p.frameCount % 5 === 0 && path.length < maxLayers) {
+      if (p.frameCount % 10 === 0 && path.length < maxLayers) {
         let newRing = [];
         for (let i = 0; i < numSides; i++) {
           let theta = p.map(i, 0, numSides, 0, p.TWO_PI);
