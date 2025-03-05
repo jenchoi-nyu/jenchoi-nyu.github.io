@@ -50,7 +50,7 @@ body, html {
   left: 0;
   width: 100%;
   height: 100vh;
-  background: url('bg.jpg') no-repeat center center fixed;
+  background: url('http://jenchoi-nyu.github.io/echo-form/bg.jpg') no-repeat center center fixed;
   background-size: cover;
   z-index: 1;
 }
