@@ -1,45 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Echo + Form | Story</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://jenchoi-nyu.github.io/echo-form/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://jenchoi-nyu.github.io/echo-form/styles.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js"></script>
 </head>
 <body>
-  <!-- Navigation Bar (same as index) -->
+  <!-- Navigation Bar -->
   <nav class="navbar">
     <a href="https://jenchoi-nyu.github.io/echo-form/index.html" class="logo-link"><h1>Echo + Form</h1></a>
     <a href="https://jenchoi-nyu.github.io/echo-form/experience.html" class="experience-button">Experience It</a>
   </nav>
 
-  <!-- Content Container -->
-   <div class="story-container">
-    <!-- Left Panel: Text Info -->
+  <!-- Story Content -->
+  <div class="story-container">
+    <!-- Left Panel: Text -->
     <div class="story-text">
       <h2>Alex Liao</h2>
       <h3><em>Fading Memories</em> by Linnea Olsson</h3>
       <p class="timeframe">[1:05–1:35]</p>
-      <p>I generally enjoy indie games, especially how they integrate music into the experience. <em>Sayonara Wild Hearts</em> stood out to me because of its incredible soundtrack. My brother introduced me to the game and I instantly loved the hyperpop tracks.</p>
-      <p>Later on, I discovered the demo version of my favorite OST from the game. It had a much calmer, more acoustic feel, and I found myself listening to it while working or taking a break because it was so relaxing.</p>
-      <p>Since the demo track was a limited edition release on a physical cassette tape, the digital version is only available on YouTube.</p>
+      <p>
+        I generally enjoy indie games, especially how they integrate music into the experience.
+        <em>Sayonara Wild Hearts</em> stood out to me because of its incredible soundtrack.
+        My brother introduced me to the game and I instantly loved the hyperpop tracks.
+      </p>
+      <p>
+        Later on, I discovered the demo version of my favorite OST from the game.
+        It had a much calmer, more acoustic feel, and I found myself listening to it while working or taking a break because it was so relaxing.
+      </p>
+      <p>
+        Since the demo track was a limited edition release on a physical cassette tape, the digital version is only available on YouTube.
+      </p>
       <div class="arrow-nav">
-         <a href="christine.html"></a>
+        <a href="christine.html">&#8592; Previous</a>
         <a href="christine.html">Next &#8594;</a>
       </div>
     </div>
 
-    <!-- Right Panel: Audio Visualization + Video -->
-   <div class="story-media">
+    <!-- Right Panel: Media -->
+    <div class="story-media">
       <video width="30%" controls>
-      <source src="Alex.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video> 
-     <!-- JS Sketch Embed -->
-  <script src="Alex.js"></script>
+        <source src="Alex.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      <!-- p5.js canvas will appear here -->
+      <div id="sketch-holder" style="margin-top: 20px;"></div>
+    </div>
   </div>
+
+  <!-- JS Sketch Embed -->
+  <script src="Alex.js"></script>
 </body>
 </html>
