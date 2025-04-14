@@ -1,0 +1,48 @@
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Echo + Form | Story</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js"></script>
+</head>
+<body>
+  <!-- Navigation Bar (same as index) -->
+  <nav class="navbar">
+    <a href="index.html" class="logo-link"><h1>Echo + Form</h1></a>
+    <a href="experience.html" class="experience-button">Experience It</a>
+  </nav>
+
+  <!-- Content Container -->
+  <div class="story-container">
+    <!-- Left Panel: Text Info -->
+    <div class="story-text">
+      <h2>Alex Liao</h2>
+      <h3><em>Fading Memories</em> by Linnea Olsson</h3>
+      <p class="timeframe">[1:05–1:35]</p>
+      <p>I generally enjoy indie games, especially how they integrate music into the experience. <em>Sayonara Wild Hearts</em> stood out to me because of its incredible soundtrack. My brother introduced me to the game and I instantly loved the hyperpop tracks.</p>
+      <p>Later on, I discovered the demo version of my favorite OST from the game. It had a much calmer, more acoustic feel, and I found myself listening to it while working or taking a break because it was so relaxing.</p>
+      <p>Since the demo track was a limited edition release on a physical cassette tape, the digital version is only available on YouTube.</p>
+      <div class="arrow-nav">
+        <a href="story-previous.html">&#8592; Previous</a>
+        <a href="story-next.html">Next &#8594;</a>
+      </div>
+    </div>
+
+    <!-- Right Panel: Audio Visualization + Video -->
+    <div class="story-media">
+      <div id="sketch-holder"></div>
+      <video width="100%" controls>
+        <source src="your-video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+
+  <!-- JS Sketch Embed -->
+  <script src="story-sketch.js"></script>
+</body>
+</html>
