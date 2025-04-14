@@ -9,7 +9,7 @@ let playButton;
 let saveButton;
 
 function preload() {
-  song = loadSound("music/Alex.mp3");
+  song = loadSound("music/Christine.mp3");
 }
 
 function setup() {
