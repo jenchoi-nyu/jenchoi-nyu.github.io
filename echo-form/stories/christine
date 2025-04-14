@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Echo + Form | Story</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://jenchoi-nyu.github.io/echo-form/styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js"></script>
+</head>
+<body>
+  <!-- Navigation Bar (same as index) -->
+  <nav class="navbar">
+    <a href="https://jenchoi-nyu.github.io/echo-form/index.html" class="logo-link"><h1>Echo + Form</h1></a>
+    <a href="https://jenchoi-nyu.github.io/echo-form/experience.html" class="experience-button">Experience It</a>
+  </nav>
+
+  <!-- Content Container -->
+  <div class="story-container">
+    <!-- Left Panel: Text Info -->
+    <div class="story-text">
+      <h2>Christine Chung</h2>
+      <h3><em>Smoking Dreams</em> by Jazzyfact</h3>
+      <p class="timeframe">[1:20-1:50]</p>
+      <p>This is my favorite music because I love the
+old-school groove of the saxophone. I also
+enjoy the chill Korean rap, with real, authentic
+and passionate lyrics about life—it feels like
+someone is speaking directly to me.</p>
+      <div class="arrow-nav">
+        <a href="alex.html">&#8592; Previous</a>
+        <a href="story-next.html">Next &#8594;</a>
+      </div>
+    </div>
+
+    <!-- Right Panel: Audio Visualization + Video -->
+    <div class="story-media">
+      <div id="sketch-holder"></div>
+      <video width="100%" controls>
+        <source src="Christine.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+
+  <!-- JS Sketch Embed -->
+  <script src="music/alex.js"></script>
+</body>
+</html>
