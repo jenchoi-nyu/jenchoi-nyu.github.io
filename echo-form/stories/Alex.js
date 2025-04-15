@@ -1,3 +1,5 @@
+let canvas = createCanvas(600, 400);
+canvas.parent('sketch-holder');
 let song;
 let fft, amp;
 let cols, rows;
