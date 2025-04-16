@@ -225,7 +225,7 @@ body, html {
 
 .story-text h3 {
   font-size: 18px;
-  font-style: italic;
+  font-style: regular;
   margin-bottom: 4px;
   background-color: white;
 }
