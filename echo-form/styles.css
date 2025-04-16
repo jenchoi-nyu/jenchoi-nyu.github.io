@@ -267,8 +267,8 @@ body, html {
   
 }
 .model-link-container {
-  background-color: white; 
-  align-items: right;
+  background-color: white;
+  text-align: right;
 }
 
 #viewModelsLink {
