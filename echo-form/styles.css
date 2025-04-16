@@ -257,6 +257,7 @@ body, html {
   display: flex;
   flex-direction: column;
   align-items: left;
+  gap: 4px;
   background-color: white;
 }
 
