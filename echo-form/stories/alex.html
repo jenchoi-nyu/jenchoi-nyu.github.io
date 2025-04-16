@@ -41,31 +41,30 @@
       </div>
     </div>
 
-   <!-- Right Panel: Media -->
-<div class="story-media" style="position: relative;">
+  <!-- Right Panel: Media -->
+<div class="story-media">
   <!-- First Video -->
   <video width="20%" controls poster="Alex.png">
     <source src="Alex.mp4" type="video/mp4" />
     Your browser does not support the video tag.
   </video>
 
-  <!-- Wrapper for second video and the link -->
-  <div style="position: relative; width: 100%;">
-    <!-- Parametric Model Link -->
-    <a href="#" id="viewModelsLink" style="position: absolute; top: 10px; right: 10px; z-index: 10; background: white; padding: 4px 8px; font-size: 14px; text-decoration: underline; color: black;">View Parametric Models</a>
-
-    <!-- Second Video -->
-    <video width="100%" controls poster="music/alex_lastframe.png">
-      <source src="music/Alex_music.mov" type="video/quicktime" />
-      Your browser does not support the video tag.
-    </video>
+  <!-- Parametric Model Link ABOVE the second video -->
+  <div style="margin: 20px 0 10px; text-align: right;">
+    <a href="#" id="viewModelsLink" style="background: white; padding: 4px 8px; font-size: 14px; text-decoration: underline; color: black;">View Parametric Models</a>
   </div>
+
+  <!-- Second Video -->
+  <video width="100%" controls poster="music/alex_lastframe.png">
+    <source src="music/Alex_music.mov" type="video/quicktime" />
+    Your browser does not support the video tag.
+  </video>
 </div>
 
 <!-- Popup Modal -->
 <div id="modelModal" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.8); z-index: 1000; justify-content: center; align-items: center;">
   <div style="position: relative; max-width: 90vw; max-height: 90vh;">
-    <img src="music/Parametric models.png" alt="Parametric Models" style="width: 100%; height: auto;" />
+    <img src="images/Parametric models.png" alt="Parametric Models" style="width: 100%; height: auto;" />
     <button onclick="document.getElementById('modelModal').style.display='none'" style="position: absolute; top: 10px; right: 10px; background: white; border: none; padding: 6px 10px; cursor: pointer;">Close</button>
   </div>
 </div>
