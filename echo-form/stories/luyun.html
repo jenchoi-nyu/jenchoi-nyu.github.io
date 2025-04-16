@@ -32,17 +32,52 @@
       </div>
     </div>
 
-    <!-- Right Panel: Audio Visualization + Video -->
-     <div class="story-media">
-  <!-- Video -->
+   <!-- Right Panel: Media -->
+<div class="story-media">
+  <!-- First Video -->
   <video width="20%" controls poster="Luyun.png">
-  <source src="Luyun.mp4" type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
-<video width="100%" controls poster="music/luyun_lastframe.png">
-  <source src="music/Luyun_music.mov" type="video/quicktime" />
-  Your browser does not support the video tag.
-</video>
+    <source src="Luyun.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Parametric Model Link ABOVE the second video -->
+  <div style="margin: 0px 0 0; text-align: right; background: white;">
+    <a href="#" id="viewModelsLink" style="background: white; padding: 4px 8px; font-size: 14px; text-decoration: underline; color: black;">View Parametric Models</a>
+  </div>
+
+  <!-- Second Video -->
+  <video width="100%" controls poster="music/luyun_lastframe.png">
+    <source src="music/Luyun_music.mov" type="video/quicktime" />
+    Your browser does not support the video tag.
+  </video>
 </div>
+
+<!-- Popup Modal -->
+<div id="modelModal" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.8); z-index: 1000; justify-content: center; align-items: center;">
+  <div id="modalContent" style="position: relative; max-width: 90vw; max-height: 90vh;">
+    <img src="music/Parametric models.png" alt="Parametric Models" style="width: 100%; height: auto;" />
+    <button onclick="document.getElementById('modelModal').style.display='none'" style="position: absolute; top: 10px; right: 10px; background: white; border: none; padding: 6px 10px; cursor: pointer;">Close</button>
+  </div>
+</div>
+
+<!-- Script -->
+<script>
+  const modal = document.getElementById('modelModal');
+  const content = document.getElementById('modalContent');
+  const viewLink = document.getElementById('viewModelsLink');
+
+  viewLink.addEventListener('click', function (event) {
+    event.preventDefault();
+    modal.style.display = 'flex';
+  });
+
+  // Close when clicking outside the modal content
+  modal.addEventListener('click', function (event) {
+    if (!content.contains(event.target)) {
+      modal.style.display = 'none';
+    }
+  });
+</script>
+
 </body>
 </html>
