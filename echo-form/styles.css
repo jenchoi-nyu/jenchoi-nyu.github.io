@@ -179,7 +179,6 @@ body, html {
 }
 /* Arrow Navigation */
 .arrow-nav {
-  position: fixed;
   top: 100px;
   left: 40px;
   right: 40px;
