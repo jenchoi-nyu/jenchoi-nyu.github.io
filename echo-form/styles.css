@@ -266,3 +266,17 @@ body, html {
   background-color: white;
   
 }
+
+#viewModelsLink {
+  background: white;
+  padding: 4px 8px;
+  font-size: 14px;
+  text-decoration: none; /* removes underline */
+  color: black;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+#viewModelsLink:hover {
+  background-color: #f0f0f0;
+}
