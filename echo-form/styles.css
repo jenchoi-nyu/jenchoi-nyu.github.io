@@ -274,6 +274,7 @@ body, html {
   text-decoration: none; /* removes underline */
   color: black;
   border-radius: 4px;
+  align-items: right;
   transition: background-color 0.2s ease;
 }
 
