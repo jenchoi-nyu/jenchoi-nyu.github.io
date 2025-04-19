@@ -270,29 +270,4 @@ body, html {
     font-size: 14px;
   }
 }
-@media (max-width: 768px) {
-  .story-container {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .story-text,
-  .story-media {
-    order: initial; /* reset in case any order was previously applied */
-  }
-
-  .story-text .timeframe {
-    order: 1;
-  }
-
-  .story-media {
-    order: 2; /* Place media immediately after timeframe */
-    margin-top: 20px;
-  }
-
-  .story-text p,
-  .story-text em {
-    order: 3;
-  }
-}
 
