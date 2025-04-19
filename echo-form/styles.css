@@ -7,6 +7,11 @@
   background-color: black;
 }
 
+.logo-img {
+  height: 40px;
+  object-fit: contain;
+}
+
 body, html {
   height: 100%;
   color: white; 
