@@ -53,10 +53,14 @@ body, html {
 
 /* Arrow Navigation */
 .arrow-nav {
-  margin-top: 20px;
-  background: none;
+  position: fixed;
+  top: 100px;
+  left: 40px;
+  right: 40px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  z-index: 5;
+  background-color: white;
 }
 
 .arrow-nav a {
