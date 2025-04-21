@@ -429,7 +429,7 @@ body, html {
   }
 
   .story-text p {
-    width: 100%;
+    width: 96%;
     max-width: 500px;
     margin-left: 12px;
   }
