@@ -157,7 +157,7 @@ body, html {
 /* Arrow Navigation */
 .arrow-nav {
   position: relative;
-  margin-top: 40px;
+  margin-top: 20px;
   display: flex;
   justify-content: space-between;
   background-color: white;
@@ -246,7 +246,7 @@ body, html {
   }
 
   .story-container {
-    padding: 40px 20px 40px;
+    padding: 20px 20px 40px;
   }
 
   .story-media video {
@@ -272,7 +272,7 @@ body, html {
   .arrow-nav {
   flex-direction: row;
   justify-content: space-between;
-  margin-top: 4px;
+  margin-top: 0px;
   position: relative;
   top: auto;
 }
