@@ -12,30 +12,6 @@ body, html {
   background-color: black;
 }
 
-.logo-img {
-  height: 60px;
-  object-fit: contain;
-}
-
-/* Container for background and nav */
-.content-container {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100vh;
-}
-
-/* Background Image */
-.background-image {
-  width: 100%;
-  height: 100vh;
-  background: url('bg.jpg') no-repeat center center fixed;
-  background-size: cover;
-  z-index: 1;
-}
-
 /* Navbar */
 .navbar {
   position: fixed;
@@ -48,21 +24,15 @@ body, html {
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
-  z-index: 2;
+  z-index: 10;
 }
 
-.navbar h1 {
-  color: white;
-  font-size: 28px;
+.logo-img {
+  height: 60px;
+  object-fit: contain;
 }
 
-.navbar a {
-  text-decoration: none;
-}
-
-/* Experience Button */
-.experience-button,
-.start-button {
+.experience-button {
   background-color: transparent;
   color: white;
   border: 2px solid white;
@@ -72,141 +42,89 @@ body, html {
   transition: background-color 0.3s ease;
 }
 
-.experience-button:hover,
-.start-button:hover {
+.experience-button:hover {
   background-color: white;
   color: black;
 }
 
-/* Bottom Left Text */
-.bottom-left-text {
-  position: relative;
-  padding: 50px 30px;
-  max-width: 1120px;
-}
-
-.bottom-left-text h1 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-.bottom-left-text p {
-  font-size: 1.2rem;
-  line-height: 1.6;
-}
-
-/* Experience Container */
-.experience-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  text-align: center;
-  flex-direction: column;
-}
-
-.main-title {
-  font-size: 64px;
-  font-weight: bold;
-  margin-bottom: 48px;
-}
-
-.start-button {
-  padding: 20px 40px;
-  font-size: 24px;
-}
-
-/* Countdown */
-.countdown {
-  position: absolute;
-  width: 100%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 82px;
-  font-weight: bold;
-  background: rgba(0, 0, 0, 0.8);
-}
-
-/* Arrow Navigation */
-.arrow-nav {
-  position: fixed;
-  top: 100px;
-  left: 40px;
-  right: 40px;
-  display: flex;
-  justify-content: space-between;
-  z-index: 5;
-  background-color: white;
-}
-
-.arrow-nav a {
-  color: black;
-  font-size: 16px;
-  text-decoration: none;
-}
-
-.arrow-nav a:hover {
-  opacity: 0.6;
-}
-
-/* Story Container Layout */
+/* Story Container */
 .story-container {
+  padding: 80px 40px 40px;
+  background-color: white;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Header: Avatar and Info */
+.story-header {
   display: flex;
   flex-direction: row;
-  padding: 160px 40px 40px;
-  gap: 40px;
-  background-color: white;
+  align-items: center;
+  gap: 24px;
 }
 
-/* Story Text */
-.story-text {
-  flex: 1;
-  max-width: 520px;
-  color: black;
+.avatar video {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 4px;
 }
 
-.story-text h2 {
+/* Story Info and Metadata */
+.story-info {
+  text-align: left;
+}
+
+.person-name {
   font-size: 24px;
+  margin-bottom: 4px;
+}
+
+.music-meta {
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  line-height: 1.4;
   margin-bottom: 6px;
 }
 
-.story-text h3 {
-  font-size: 18px;
-  margin-bottom: 4px;
+.track-title {
+  font-style: italic;
+  color: black;
+}
+
+.track-author {
+  color: #666;
 }
 
 .timeframe {
   font-size: 16px;
-  margin-bottom: 20px;
   color: #666;
 }
 
-.story-text p,
-.story-text em {
-  font-size: 16px;
-  line-height: 1.7;
-  margin-bottom: 16px;
+/* Body: Media + Text */
+.story-body {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
 }
 
-/* Story Media */
 .story-media {
   flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 4px;
 }
 
-/* Sketch Holder */
-#sketch-holder {
-  width: 50%;
+.story-media video {
+  width: 100%;
+  margin-bottom: 12px;
 }
 
-/* View Parametric Models Link */
 .model-link-container {
-  text-align: right;
-  padding-top: 8px;
+  text-align: left;
+  margin-bottom: 16px;
 }
 
 #viewModelsLink {
@@ -223,50 +141,140 @@ body, html {
   background-color: #f0f0f0;
 }
 
-/* Responsive Layout */
+.story-text {
+  flex: 1;
+  max-width: 520px;
+}
+
+.story-text p {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+/* Arrow Navigation */
+.arrow-nav {
+  position: relative;
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 40px;
+  background-color: white;
+}
+
+
+.arrow-nav a {
+  color: black;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.arrow-nav a:hover {
+  opacity: 0.6;
+}
+
+/* Modal */
+#modelModal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.8);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+#modalContent {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+}
+
+#modalContent img {
+  width: 100%;
+  height: auto;
+}
+
+#modalContent button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: white;
+  border: none;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
-  .navbar h1 {
-    font-size: 28px;
+  .story-header,
+  .story-body {
+    flex-direction: column;
+    align-items: center;
   }
 
-  .experience-button {
-    font-size: 16px;
-    padding: 8px 16px;
+  .avatar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 12px;
   }
 
-  .bottom-left-text h1 {
-    font-size: 26px;
+  .avatar video {
+    width: 180px;
+    height: auto;
   }
 
-  .bottom-left-text p {
-    font-size: 16px;
+  .story-info {
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .music-meta {
+    align-items: center;
+  }
+
+  .track-title,
+  .track-author {
+    display: block;
   }
 
   .story-container {
-    flex-direction: column-reverse;
-    padding: 20px;
+    padding: 120px 20px 40px;
   }
 
   .story-media video {
     width: 100% !important;
   }
+
+  .model-link-container {
+    text-align: center;
+  }
+
+  .story-text {
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+  }
+
+  .story-text p {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .arrow-nav {
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 20px;
+  margin-top: 40px;
+  position: relative;
+  top: auto;
 }
-
-@media (max-width: 480px) {
-  .navbar h1 {
-    font-size: 24px;
-  }
-
-  .experience-button {
-    font-size: 14px;
-    padding: 6px 12px;
-  }
-
-  .bottom-left-text h1 {
-    font-size: 22px;
-  }
-
-  .bottom-left-text p {
-    font-size: 14px;
-  }
 }
