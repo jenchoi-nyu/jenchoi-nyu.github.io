@@ -244,7 +244,7 @@ body, html {
   }
 
   .story-container {
-    padding: 120px 20px 40px;
+    padding: 80px 20px 40px;
   }
 
   .story-media video {
@@ -270,8 +270,7 @@ body, html {
   .arrow-nav {
   flex-direction: row;
   justify-content: space-between;
-  padding: 0 20px;
-  margin-top: 40px;
+  margin-top: 4px;
   position: relative;
   top: auto;
 }
