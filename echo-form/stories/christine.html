@@ -4,14 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Echo + Form | Story</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://jenchoi-nyu.github.io/echo-form/styles.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js"></script>
 </head>
 <body>
   <!-- Navigation Bar -->
-  <nav class="navbar">
+  <nav class="navbar"> 
     <a href="https://jenchoi-nyu.github.io/echo-form/index.html" class="logo-link">
       <img src="https://jenchoi-nyu.github.io/echo-form/Logo_white.png" alt="Echo + Form Logo" class="logo-img">
     </a>
@@ -20,46 +20,51 @@
 
   <!-- Story Content -->
   <div class="story-container">
-    <!-- Left Panel: Text Info -->
-    <div class="story-text">
-      <h2>Christine Chung</h2>
-      <h3><em>Smoking Dreams</em> by Jazzyfact</h3>
-      <p class="timeframe">[1:20–1:50]</p>
-      <p>
-        This is my favorite music because I love the old-school groove of the saxophone. I also enjoy the chill Korean rap, with real, authentic and passionate lyrics about life—it feels like someone is speaking directly to me.
-      </p>
-      <div class="arrow-nav">
-        <a href="alex.html">&#8592; Previous</a>
-        <a href="jenny.html">Next &#8594;</a>
+    
+    <div class="arrow-nav">
+      <a href="alex.html">← Previous</a>
+      <a href="jenny.html">Next →</a>
+    </div>
+
+    <div class="story-header">
+      <div class="avatar">
+        <video controls playsinline poster="Christine.png">
+          <source src="Christine.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="story-info">
+        <h2 class="person-name">Christine Chung</h2>
+        <div class="music-meta">
+          <div class="track-title"><em>Smoking Dreams</em></div>
+          <div class="track-author">by Jazzyfact</div>
+        </div>
+        <p class="timeframe">[1:20–1:50]</p>
       </div>
     </div>
 
-    <!-- Right Panel: Media -->
-    <div class="story-media">
-      <!-- First Video -->
-      <video width="20%" controls playsinline poster="Christine.png">
-        <source src="Christine.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-
-      <!-- Parametric Model Link -->
-      <div class="model-link-container">
-        <a href="#" id="viewModelsLink">View Parametric Models ↗</a>
+    <div class="story-body">
+      <div class="story-media">
+        <video controls playsinline poster="music/christine_lastframe.png">
+          <source src="music/Christine_music.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div class="model-link-container">
+          <a href="#" id="viewModelsLink">View Parametric Models ↗</a>
+        </div>
       </div>
 
-      <!-- Second Video -->
-      <video width="100%" controls playsinline poster="music/christine_lastframe.png">
-        <source src="music/Christine_music.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+      <div class="story-text">
+        <p>This is my favorite music because I love the old-school groove of the saxophone. I also enjoy the chill Korean rap, with real, authentic and passionate lyrics about life—it feels like someone is speaking directly to me.</p>
+      </div>
     </div>
   </div>
 
   <!-- Popup Modal -->
-  <div id="modelModal" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.8); z-index: 1000; justify-content: center; align-items: center;">
-    <div id="modalContent" style="position: relative; max-width: 90vw; max-height: 90vh;">
-      <img src="music/Parametric models.png" alt="Parametric Models" style="width: 100%; height: auto;" />
-      <button onclick="document.getElementById('modelModal').style.display='none'" style="position: absolute; top: 10px; right: 10px; background: white; border: none; padding: 6px 10px; cursor: pointer;">Close</button>
+  <div id="modelModal">
+    <div id="modalContent">
+      <img src="music/Parametric models.png" alt="Parametric Models">
+      <button onclick="document.getElementById('modelModal').style.display='none'">Close</button>
     </div>
   </div>
 
