@@ -54,7 +54,7 @@ body, html {
   color: black;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 20px;
 }
 
 /* Header: Avatar and Info */
@@ -158,7 +158,6 @@ body, html {
   margin-top: 40px;
   display: flex;
   justify-content: space-between;
-  padding: 0 40px;
   background-color: white;
 }
 
