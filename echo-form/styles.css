@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Manrope', sans-serif;
+  letter-spacing: 0.03em;
 }
 
 body, html {
@@ -11,7 +12,7 @@ body, html {
   color: white;
   background-color: black;
   line-height: 1.65;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.03em;
 }
 
 .logo-img {
@@ -54,7 +55,7 @@ body, html {
   color: white;
   font-size: 28px;
   line-height: 1.25;
-  letter-spacing: 0.015em;
+  letter-spacing: 0.04em;
   margin-bottom: 0;
 }
 
@@ -71,7 +72,7 @@ body, html {
   cursor: pointer;
   transition: background-color 0.3s ease;
   line-height: 1.5;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.05em;
 }
 
 .experience-button:hover {
@@ -89,14 +90,14 @@ body, html {
   font-size: 2rem;
   margin-bottom: 24px;
   line-height: 1.2;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.04em;
 }
 
 .bottom-left-text p {
   font-size: 1.2rem;
   line-height: 1.7;
   margin-bottom: 20px;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.03em;
 }
 
 .experience-container {
@@ -116,7 +117,7 @@ body, html {
   font-weight: bold;
   margin-bottom: 32px;
   line-height: 1.2;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.04em;
   max-width: 800px;
 }
 
@@ -129,7 +130,7 @@ body, html {
   cursor: pointer;
   transition: background-color 0.3s ease;
   line-height: 1.5;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.05em;
   margin-bottom: 40px;
 }
 
@@ -182,7 +183,7 @@ body, html {
   font-size: 24px;
   margin-bottom: 4px;
   line-height: 1.2;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.04em;
 }
 
 .music-meta {
@@ -201,7 +202,7 @@ body, html {
 .track-author {
   color: #666;
   font-size: 14px;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.04em;
   line-height: 1.6;
   margin-bottom: 12px;
 }
@@ -210,7 +211,7 @@ body, html {
   font-size: 14px;
   color: #aaa;
   line-height: 1.6;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.04em;
   margin-bottom: 12px;
 }
 
@@ -244,6 +245,7 @@ body, html {
   background: white;
   border-radius: 4px;
   transition: background-color 0.2s ease;
+  letter-spacing: 0.04em;
 }
 
 #viewModelsLink:hover {
@@ -262,7 +264,7 @@ body, html {
   font-size: 16px;
   line-height: 1.7;
   margin-bottom: 20px;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.03em;
 }
 
 .arrow-nav {
@@ -277,7 +279,7 @@ body, html {
   color: black;
   font-size: 15px;
   text-decoration: none;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.05em;
 }
 
 .arrow-nav a:hover {
@@ -406,7 +408,7 @@ body, html {
   }
 
   .story-container {
-    padding: 80px 20px 40px;
+    padding: 72px 20px 40px;
   }
 
   .story-media video {
@@ -427,6 +429,7 @@ body, html {
   .story-text p {
     width: 100%;
     max-width: 500px;
+    margin-left: 12px;
   }
 
   .arrow-nav {
