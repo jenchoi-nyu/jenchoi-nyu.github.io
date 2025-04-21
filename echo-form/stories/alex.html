@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Echo + Form | Story</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://jenchoi-nyu.github.io/echo-form/styles.css" />
+  <link rel="stylesheet" href="styles.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js"></script>
 </head>
@@ -13,81 +13,78 @@
   <!-- Navigation Bar -->
   <nav class="navbar"> 
     <a href="https://jenchoi-nyu.github.io/echo-form/index.html" class="logo-link">
-        <img src="https://jenchoi-nyu.github.io/echo-form/Logo_white.png" alt="Echo + Form Logo" class="logo-img">
-      </a>
+      <img src="https://jenchoi-nyu.github.io/echo-form/Logo_white.png" alt="Echo + Form Logo" class="logo-img">
+    </a>
     <a href="https://jenchoi-nyu.github.io/echo-form/experience.html" class="experience-button">Experience It</a>
   </nav>
 
   <!-- Story Content -->
   <div class="story-container">
-    <!-- Left Panel: Text -->
-    <div class="story-text">
-      <h2>Alex Liao</h2>
-      <h3><em>Fading Memories</em> by Linnea Olsson</h3>
-      <p class="timeframe">[1:05–1:35]</p>
-      <p>
-        I generally enjoy indie games, especially how they integrate music into the experience.
-        <em>Sayonara Wild Hearts</em> stood out to me because of its incredible soundtrack.
-        My brother introduced me to the game and I instantly loved the hyperpop tracks.
-      </p>
-      <p>
-        Later on, I discovered the demo version of my favorite OST from the game.
-        It had a much calmer, more acoustic feel, and I found myself listening to it while working or taking a break because it was so relaxing.
-      </p>
-      <p>
-        Since the demo track was a limited edition release on a physical cassette tape, the digital version is only available on YouTube.
-      </p>
-      <div class="arrow-nav">
-        <a href="christine.html"></a>
-        <a href="christine.html">Next &#8594;</a>
+    
+    <div class="arrow-nav">
+      <a href="#">← Previous</a>
+      <a href="christine.html">Next →</a>
+    </div>
+    <div class="story-header">
+      <div class="avatar">
+        <video controls poster="Alex.png">
+          <source src="Alex.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="story-info">
+        <h2 class="person-name">Alex Liao</h2>
+        <div class="music-meta">
+          <div class="track-title"><em>Fading Memories</em></div>
+          <div class="track-author">by Linnea Olsson</div>
+        </div>
+        <p class="timeframe">[1:05–1:35]</p>
       </div>
     </div>
 
-  <!-- Right Panel: Media -->
-<div class="story-media">
-  <!-- First Video -->
-  <video width="20%" controls poster="Alex.png">
-    <source src="Alex.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
-  </video>
+    <div class="story-body">
+      <div class="story-media">
+        <video controls poster="music/alex_lastframe.png">
+          <source src="music/Alex_music.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div class="model-link-container">
+          <a href="#" id="viewModelsLink">View Parametric Models ↗</a>
+        </div>
+      </div>
 
-  <!-- Parametric Model Link ABOVE the second video -->
-  <div class="model-link-container">
-    <a href="#" id="viewModelsLink">View Parametric Models ↗</a>
+      <div class="story-text">
+        <p>I generally enjoy indie games, especially how they integrate music into the experience. <em>Sayonara Wild Hearts</em> stood out to me because of its incredible soundtrack. My brother introduced me to the game and I instantly loved the hyperpop tracks.</p>
+        <p>Later on, I discovered the demo version of my favorite OST from the game. It had a much calmer, more acoustic feel, and I found myself listening to it while working or taking a break because it was so relaxing.</p>
+        <p>Since the demo track was a limited edition release on a physical cassette tape, the digital version is only available on YouTube.</p>
+      </div>
+    </div>
   </div>
 
-  <!-- Second Video -->
-  <video width="100%" controls poster="music/alex_lastframe.png">
-    <source src="music/Alex_music.mp4" ttype="video/mp4" />
-    Your browser does not support the video tag.
-  </video>
-</div>
-
-<!-- Popup Modal -->
-<div id="modelModal" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.8); z-index: 1000; justify-content: center; align-items: center;">
-  <div id="modalContent" style="position: relative; max-width: 90vw; max-height: 90vh;">
-    <img src="music/Parametric models.png" alt="Parametric Models" style="width: 100%; height: auto;" />
-    <button onclick="document.getElementById('modelModal').style.display='none'" style="position: absolute; top: 10px; right: 10px; background: white; border: none; padding: 6px 10px; cursor: pointer;">Close</button>
+  <!-- Popup Modal -->
+  <div id="modelModal">
+    <div id="modalContent">
+      <img src="music/Parametric models.png" alt="Parametric Models">
+      <button onclick="document.getElementById('modelModal').style.display='none'">Close</button>
+    </div>
   </div>
-</div>
 
-<!-- Script -->
-<script>
-  const modal = document.getElementById('modelModal');
-  const content = document.getElementById('modalContent');
-  const viewLink = document.getElementById('viewModelsLink');
+  <!-- Script -->
+  <script>
+    const modal = document.getElementById('modelModal');
+    const content = document.getElementById('modalContent');
+    const viewLink = document.getElementById('viewModelsLink');
 
-  viewLink.addEventListener('click', function (event) {
-    event.preventDefault();
-    modal.style.display = 'flex';
-  });
+    viewLink.addEventListener('click', function (event) {
+      event.preventDefault();
+      modal.style.display = 'flex';
+    });
 
-  // Close when clicking outside the modal content
-  modal.addEventListener('click', function (event) {
-    if (!content.contains(event.target)) {
-      modal.style.display = 'none';
-    }
-  });
-</script>
+    modal.addEventListener('click', function (event) {
+      if (!content.contains(event.target)) {
+        modal.style.display = 'none';
+      }
+    });
+  </script>
 </body>
 </html>
