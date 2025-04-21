@@ -361,6 +361,11 @@ body, html {
    .navbar {
     height: 64px;
   }
+  
+  .logo-img {
+    height: 48px;
+  }
+  
   .navbar h1 {
     font-size: 24px;
   }
@@ -413,11 +418,12 @@ body, html {
   }
 
   .story-container {
-    padding: 76px 20px 40px;
+    padding: 64px 20px 40px;
   }
 
   .story-media video {
     width: 100% !important;
+    margin-bottom: 4px; 
   }
 
   .model-link-container {
