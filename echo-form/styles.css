@@ -358,6 +358,9 @@ body, html {
 }
 
 @media (max-width: 480px) {
+   .navbar {
+    height: 64px;
+  }
   .navbar h1 {
     font-size: 24px;
   }
@@ -410,7 +413,7 @@ body, html {
   }
 
   .story-container {
-    padding: 72px 20px 40px;
+    padding: 76px 20px 40px;
   }
 
   .story-media video {
@@ -432,6 +435,7 @@ body, html {
     width: 96%;
     max-width: 500px;
     margin-left: 12px;
+    margin-top: -24px;
   }
 
   .arrow-nav {
