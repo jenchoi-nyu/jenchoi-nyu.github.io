@@ -12,6 +12,30 @@ body, html {
   background-color: black;
 }
 
+.logo-img {
+  height: 60px;
+  object-fit: contain;
+}
+
+/* Container for background and nav */
+.content-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+
+/* Background Image */
+.background-image {
+  width: 100%;
+  height: 100vh;
+  background: url('bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  z-index: 1;
+}
+
 /* Navbar */
 .navbar {
   position: fixed;
@@ -24,15 +48,21 @@ body, html {
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
-  z-index: 10;
+  z-index: 2;
 }
 
-.logo-img {
-  height: 60px;
-  object-fit: contain;
+.navbar h1 {
+  color: white;
+  font-size: 28px;
 }
 
-.experience-button {
+.navbar a {
+  text-decoration: none;
+}
+
+/* Experience Button */
+.experience-button,
+.start-button {
   background-color: transparent;
   color: white;
   border: 2px solid white;
@@ -42,9 +72,60 @@ body, html {
   transition: background-color 0.3s ease;
 }
 
-.experience-button:hover {
+.experience-button:hover,
+.start-button:hover {
   background-color: white;
   color: black;
+}
+
+/* Bottom Left Text */
+.bottom-left-text {
+  position: relative;
+  padding: 50px 30px;
+  max-width: 1120px;
+}
+
+.bottom-left-text h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.bottom-left-text p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Experience Container */
+.experience-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  flex-direction: column;
+}
+
+.main-title {
+  font-size: 64px;
+  font-weight: bold;
+  margin-bottom: 48px;
+}
+
+.start-button {
+  padding: 20px 40px;
+  font-size: 24px;
+}
+
+/* Countdown */
+.countdown {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 82px;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.8);
 }
 
 /* Story Container */
