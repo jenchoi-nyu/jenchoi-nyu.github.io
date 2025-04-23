@@ -29,10 +29,11 @@
     </div>
   </div>
 
-  <!-- Right: Button -->
-  <div class="instruction-button">
-    <a href="#" id="viewModelsLink" class="experience-button">Complete Your Info</a>
-  </div>
+<!-- Right: Button -->
+<div id="instructionButton" class="instruction-button" style="display: none;">
+  <a href="#" id="viewModelsLink" class="experience-button">Complete Your Info</a>
+</div>
+
 </nav>
 
 
@@ -62,22 +63,29 @@
     </div>
   </div>
 
-  <!-- Script -->
   <script>
-    const modal = document.getElementById('modelModal');
-    const content = document.getElementById('modalContent');
-    const viewLink = document.getElementById('viewModelsLink');
+  const modal = document.getElementById('modelModal');
+  const content = document.getElementById('modalContent');
+  const viewLink = document.getElementById('viewModelsLink');
+  const startBtn = document.getElementById('startButton');
+  const keyboardInstructions = document.getElementById('keyboardInstructions');
+  const instructionButton = document.getElementById('instructionButton');
 
-    viewLink.addEventListener('click', function (event) {
-      event.preventDefault();
-      modal.style.display = 'flex';
-    });
+  viewLink.addEventListener('click', function (event) {
+    event.preventDefault();
+    modal.style.display = 'flex';
+  });
 
-    modal.addEventListener('click', function (event) {
-      if (!content.contains(event.target)) {
-        modal.style.display = 'none';
-      }
-    });
-  </script>
+  modal.addEventListener('click', function (event) {
+    if (!content.contains(event.target)) {
+      modal.style.display = 'none';
+    }
+  });
+
+  startBtn.addEventListener('click', function () {
+    keyboardInstructions.style.display = 'flex';
+    instructionButton.style.display = 'block';
+  });
+</script>
 </body>
 </html>
