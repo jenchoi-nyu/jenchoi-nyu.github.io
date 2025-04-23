@@ -83,7 +83,7 @@ body, html {
 
 .center-text {
   max-width: 1200px;
-  margin: 160px auto 0;
+  margin: 120px auto 0;
   text-align: center;
   display: flex;
   flex-direction: column;
