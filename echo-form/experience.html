@@ -68,6 +68,11 @@
   const content = document.getElementById('modalContent');
   const viewLink = document.getElementById('viewModelsLink');
   const startButton = document.getElementById('startButton');
+  const countdownEl = document.getElementById('countdown');
+  const countdownNumber = document.getElementById('countdown-number');
+
+  let countdownValue = 3;
+  let countdownInterval;
 
   viewLink.addEventListener('click', function (event) {
     event.preventDefault();
@@ -81,10 +86,27 @@
   });
 
   startButton.addEventListener('click', function () {
-    // Show the hidden button after Start is clicked
-    viewLink.style.display = 'inline-block';
+    countdownValue = 3;
+    countdownEl.style.display = 'block';
+    countdownNumber.textContent = countdownValue;
+
+    countdownInterval = setInterval(() => {
+      countdownValue--;
+      countdownNumber.textContent = countdownValue;
+
+      if (countdownValue <= 0) {
+        clearInterval(countdownInterval);
+        countdownEl.style.display = 'none';
+
+        // ✅ Now show the button
+        viewLink.style.display = 'inline-block';
+
+        // You can also trigger recording here if needed
+      }
+    }, 1000);
   });
 </script>
+
 
 </body>
 </html>
