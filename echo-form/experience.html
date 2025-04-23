@@ -20,8 +20,7 @@
   </a>
   <!-- Instructions that will be displayed after start button is pressed -->
   <div id="keyboardInstructions" class="keyboard-instructions" style="display: none;">
-    <p>SPACE Key = Pause/Resume &nbsp;|&nbsp; ESC Key = Reset &nbsp;|&nbsp; RETURN Key = Screenshot &nbsp;|&nbsp;&nbsp;&nbsp; 
-    <a href="#" id="viewModelsLink" class="experience-button">Complete Your Info</a> </p>
+    <a href="#" id="viewModelsLink" class="experience-button">Complete Your Info</a>
   </div>
 </nav>
 
@@ -50,7 +49,15 @@
       <button onclick="document.getElementById('modelModal').style.display='none'">Close</button>
     </div>
   </div>
+<!-- Buttons Overlay (Now inside .controls) -->
+<div id="controls" class="controls" style="display: none;">
+  <button id="stopResumeButton" class="action-button">Stop</button>
+  <button id="resetButton" class="action-button">Reset</button>
+  <button id="screenshotButton" class="action-button">Screenshot</button>
+</div>
 
+<!-- p5.js Canvas Container (Now full-screen) -->
+<div id="p5-canvas-container" class="canvas-container" style="display: none;"></div>
   <!-- Script -->
   <script>
     const modal = document.getElementById('modelModal');
