@@ -170,6 +170,22 @@ body, html {
   color: black;
 }
 
+.grid-item.placeholder {
+  background-color: transparent;
+  border: 2px dashed white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid-item.placeholder .overlay {
+  background: none;
+  color: white;
+  font-size: 36px;
+  font-weight: bold;
+  pointer-events: none;
+}
+
 .floating-button {
   display: none;
   background-color: transparent;
