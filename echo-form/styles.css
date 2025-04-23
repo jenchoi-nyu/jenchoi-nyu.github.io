@@ -187,6 +187,24 @@ body, html {
   pointer-events: none;
 }
 
+/* Show “Add My Own” help text on hover over placeholder grids */
+.grid-item.placeholder .overlay::after {
+  content: 'Add My Own';
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 0.9em;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.grid-item.placeholder:hover .overlay::after {
+  opacity: 1;
+}
+
 .floating-button {
   display: none;
   background-color: transparent;
