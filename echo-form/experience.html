@@ -20,32 +20,29 @@
   </a>
   <!-- Instructions that will be displayed after start button is pressed -->
   <div id="keyboardInstructions" class="keyboard-instructions" style="display: none;">
-    <a href="#" id="viewModelsLink" class="experience-button">Complete Your Info</a>
+    <p>SPACE Key = Pause/Resume | ESC Key = Reset | RETURN Key = Screenshot  |  
+    <a href="#" id="viewModelsLink" class="experience-button">Complete Your Info</a> </p>
   </div>
 </nav>
- <!-- Experience Page Content -->
+
+  <!-- Experience Page Content -->
   <div class="experience-container">
     <div class="content">
+      <!-- Main Title -->
       <h1 class="main-title">Speak Your Name<br>to Shape the Form</h1>
 
       <!-- Start Button -->
-      <button id="startButton" class="action-button">Start Recording</button>
+      <button id="startButton" class="start-button">Start Recording</button>
 
-      <!-- Countdown -->
+      <!-- Countdown with message -->
       <div id="countdown" class="countdown" style="display: none;">
         <h5>Speak Your Name in</h5><h1><span id="countdown-number">3</span></h1>
       </div>
+    </div>
+  </div>
 
-<!-- Buttons Overlay (Now inside .controls) -->
-<div id="controls" class="controls" style="display: none;">
-  <button id="stopResumeButton" class="action-button">Stop</button>
-  <button id="resetButton" class="action-button">Reset</button>
-  <button id="screenshotButton" class="action-button">Screenshot</button>
-</div>
-
-<!-- p5.js Canvas Container (Now full-screen) -->
-<div id="p5-canvas-container" class="canvas-container" style="display: none;"></div>
-      
+  <!-- Add p5.js canvas element -->
+  <div id="p5-canvas-container" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: none;"></div>
   <!-- Popup Modal -->
   <div id="modelModal">
     <div id="modalContent">
@@ -53,15 +50,7 @@
       <button onclick="document.getElementById('modelModal').style.display='none'">Close</button>
     </div>
   </div>
-<!-- Buttons Overlay (Now inside .controls) -->
-<div id="controls" class="controls" style="display: none;">
-  <button id="stopResumeButton" class="action-button">Stop</button>
-  <button id="resetButton" class="action-button">Reset</button>
-  <button id="screenshotButton" class="action-button">Screenshot</button>
-</div>
 
-<!-- p5.js Canvas Container (Now full-screen) -->
-<div id="p5-canvas-container" class="canvas-container" style="display: none;"></div>
   <!-- Script -->
   <script>
     const modal = document.getElementById('modelModal');
