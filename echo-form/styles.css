@@ -453,24 +453,45 @@ body, html {
 }
 
 @media (max-width: 480px) {
-   .navbar {
+    .navbar {
     height: 64px;
   }
-  
+
   .logo-img {
     height: 48px;
     margin-top: 8px;
     margin-left: -8px;
   }
-  
+
   .navbar h1 {
     font-size: 24px;
+  }
+
+  .start-button {
+    font-size: 14px;
+    padding: 6px 12px;
+    margin-right: -4px;
+    text-align: center;
   }
 
   .experience-button {
     font-size: 14px;
     padding: 6px 12px;
      margin-right: -4px;
+  }
+
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    padding: 20px;
+  }
+
+  .bottom-left-text h1 {
+    font-size: 22px;
+  }
+
+  .bottom-left-text p {
+    font-size: 14px;
   }
 
   .bottom-left-text h1 {
