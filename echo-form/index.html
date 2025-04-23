@@ -10,26 +10,27 @@
 <body>
   <div class="content-container">
     <!-- Top Navigation Bar -->
-    <nav class="navbar">
-      <a href="index.html" class="logo-link">
-        <img src="https://jenchoi-nyu.github.io/echo-form/Logo_white.png" alt="Echo + Form Logo" class="logo-img">
-      </a>
-      <a href="experience.html" class="experience-button">Try It Yourself</a>
-    </nav>
+   <nav class="navbar">
+  <a href="index.html" class="logo-link">
+    <img src="https://jenchoi-nyu.github.io/echo-form/Logo_white.png" alt="Echo + Form Logo" class="logo-img">
+  </a>
+  <a href="experience.html" id="floatingButton" class="floating-button">Create My Own</a>
+</nav>
 
     <!-- Center Text -->
-    <div class="center-text">
-      <h1>Can we give shape to our voice?</h1>
-      <p>
-        <i>Echo + Form</i> is a reflective, exploratory project that designs from the inside out blending traditional craft with digital technology to explore how personal data can be transformed into physical forms that hold memory.
-      </p>
-      <a href="experience.html" class="start-button">Create My Own</a>
-    </div>
+  <!-- Center Text -->
+<div class="center-text" id="centerText">
+  <h1>Can we give shape to our voice?</h1>
+  <p>
+    <i>Echo + Form</i> is a reflective, exploratory project that designs from the inside out blending traditional craft with digital technology to explore how personal data can be transformed into physical forms that hold memory.
+  </p>
+  <a href="experience.html" class="start-button">Create My Own</a>
+</div>
 
     <!-- Grid of Squares -->
     <div class="grid-container">
       <a href="stories/alex.html" class="grid-item">
-        <img src="stories/Alex.png" alt="Person 1">
+        <img src="https://jenchoi-nyu.github.io/echo-form/stories/Alex.png" alt="Person 1">
         <div class="overlay">Alex L.</div>
       </a>
       <a href="stories/christine.html" class="grid-item">
@@ -64,4 +65,18 @@
       <!-- Repeat for more items -->
     </div>
   </div>
+  <script>
+  window.addEventListener('scroll', () => {
+    const center = document.getElementById('centerText');
+    const floatingBtn = document.getElementById('floatingButton');
+    const centerBottom = center.getBoundingClientRect().bottom;
+
+    if (centerBottom < 100) {
+      floatingBtn.style.display = 'inline-block';
+    } else {
+      floatingBtn.style.display = 'none';
+    }
+  });
+</script>
 </body>
+</html>
