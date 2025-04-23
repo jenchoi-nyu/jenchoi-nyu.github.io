@@ -478,17 +478,17 @@ body, html {
     font-size: 24px;
   }
 
-  .start-button {
-    font-size: 14px;
-    padding: 6px 12px;
-    margin-right: -4px;
-    text-align: center;
-  }
 
   .experience-button {
     font-size: 14px;
     padding: 6px 12px;
      margin-right: -4px;
+  }
+
+  .floating-button {
+    font-size: 14px;
+    padding: 6px 12px;
+    margin-right: -4px;
   }
 
   .grid-container {
@@ -498,8 +498,8 @@ body, html {
   }
   .grid-item {
   position: relative;
-  width: 120px;
-  height: 120px;
+  width: 80px;
+  height: 80px;
   overflow: hidden;
   border: 2px solid white;
   text-decoration: none;
