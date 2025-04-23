@@ -479,6 +479,7 @@ body, html {
   }
 
 
+  .start-button, 
   .experience-button {
     font-size: 14px;
     padding: 6px 12px;
@@ -498,18 +499,18 @@ body, html {
   }
   .grid-item {
   position: relative;
-  width: 120px;
-  height:120px;
+  width: 160px;
+  height: 160px;
   overflow: hidden;
   border: 2px solid white;
   text-decoration: none;
 }
 
-  .bottom-left-text h1 {
+  .center-text h1 {
     font-size: 16px;
   }
 
-  .bottom-left-text p {
+  .center-text p {
     font-size: 12px;
   }
 
