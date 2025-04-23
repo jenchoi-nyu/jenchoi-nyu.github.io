@@ -498,20 +498,12 @@ body, html {
   }
   .grid-item {
   position: relative;
-  width: 80px;
-  height: 80px;
+  width: 120px;
+  height:120px;
   overflow: hidden;
   border: 2px solid white;
   text-decoration: none;
 }
-
-  .bottom-left-text h1 {
-    font-size: 22px;
-  }
-
-  .bottom-left-text p {
-    font-size: 14px;
-  }
 
   .bottom-left-text h1 {
     font-size: 16px;
