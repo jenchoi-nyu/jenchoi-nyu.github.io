@@ -43,6 +43,30 @@
 
   <!-- Add p5.js canvas element -->
   <div id="p5-canvas-container" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: none;"></div>
+  <!-- Popup Modal -->
+  <div id="modelModal">
+    <div id="modalContent">
+      <img src="stories/Survey_QR.png" alt="Survey QR">
+      <button onclick="document.getElementById('modelModal').style.display='none'">Close</button>
+    </div>
+  </div>
 
+  <!-- Script -->
+  <script>
+    const modal = document.getElementById('modelModal');
+    const content = document.getElementById('modalContent');
+    const viewLink = document.getElementById('viewModelsLink');
+
+    viewLink.addEventListener('click', function (event) {
+      event.preventDefault();
+      modal.style.display = 'flex';
+    });
+
+    modal.addEventListener('click', function (event) {
+      if (!content.contains(event.target)) {
+        modal.style.display = 'none';
+      }
+    });
+  </script>
 </body>
 </html>
