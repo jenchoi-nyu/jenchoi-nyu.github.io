@@ -154,8 +154,8 @@ body, html {
 .overlay {
   position: absolute;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.6);
-  color: white;
+  background: rgba(0, 0, 0, 0.1);
+  color: black;
   width: 100%;
   padding: 8px 0;
   text-align: center;
@@ -169,6 +169,27 @@ body, html {
   background: rgba(255, 255, 255, 0.8);
   color: black;
 }
+
+.floating-button {
+  display: none;
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  padding: 12px 24px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  line-height: 1.5;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+}
+
+.floating-button:hover {
+  background-color: white;
+  color: black;
+}
+
 
 .start-button {
   background-color: transparent;
