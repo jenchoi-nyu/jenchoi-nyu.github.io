@@ -241,13 +241,24 @@ body, html {
 .keyboard-instructions {
   flex: 1;
   text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.instruction-text {
   font-size: 14px;
   font-weight: 500;
   letter-spacing: 0.04em;
   color: white;
-  margin-left: auto;
-  margin-right: auto;
 }
+
+.instruction-button {
+  margin-left: auto;
+}
+
 
 .story-container {
   padding: 80px 40px 40px;
