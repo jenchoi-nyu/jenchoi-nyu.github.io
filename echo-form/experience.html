@@ -31,7 +31,7 @@
 
   <!-- Right: Button -->
   <div class="instruction-button">
-    <a href="#" id="viewModelsLink" class="experience-button" style="display: none;">Complete My Info</a>
+    <a href="#" id="viewModelsLink" class="experience-button">Complete My Info</a>
   </div>
 </nav>
 
@@ -63,28 +63,21 @@
   </div>
 
   <!-- Script -->
- <script>
-  const modal = document.getElementById('modelModal');
-  const content = document.getElementById('modalContent');
-  const viewLink = document.getElementById('viewModelsLink');
-  const startButton = document.getElementById('startButton');
+  <script>
+    const modal = document.getElementById('modelModal');
+    const content = document.getElementById('modalContent');
+    const viewLink = document.getElementById('viewModelsLink');
 
-  viewLink.addEventListener('click', function (event) {
-    event.preventDefault();
-    modal.style.display = 'flex';
-  });
+    viewLink.addEventListener('click', function (event) {
+      event.preventDefault();
+      modal.style.display = 'flex';
+    });
 
-  modal.addEventListener('click', function (event) {
-    if (!content.contains(event.target)) {
-      modal.style.display = 'none';
-    }
-  });
-
-  startButton.addEventListener('click', function () {
-    // Show the hidden button after Start is clicked
-    viewLink.style.display = 'inline-block';
-  });
-</script>
-
+    modal.addEventListener('click', function (event) {
+      if (!content.contains(event.target)) {
+        modal.style.display = 'none';
+      }
+    });
+  </script>
 </body>
 </html>
