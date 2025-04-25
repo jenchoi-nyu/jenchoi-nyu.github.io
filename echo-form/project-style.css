@@ -1,0 +1,96 @@
+/* Base Styling */
+body {
+  font-family: 'Manrope', sans-serif;
+  font-size: 15px;
+  line-height: 1.8;
+  margin: 0;
+  padding: 2rem;
+  background: #fff;
+  color: #111;
+  max-width: 1120px;
+}
+
+/* Navigation */
+nav {
+  text-align: left;
+  margin-bottom: 3rem;
+}
+
+nav a {
+  margin-right: 1.5rem;
+  text-decoration: none;
+  color: #111;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: #555;
+}
+
+/* Main Content */
+main section {
+  margin-bottom: 3rem;
+}
+
+h2 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+h3 {
+  font-size: 1.05rem;
+  margin-top: 1.5rem;
+  font-weight: 00;
+  letter-spacing: 0.01em;
+}
+
+p {
+  margin: 0.5rem 0;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+
+}
+
+a {
+  color: #000;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.news-item {
+  margin-bottom: 2rem;
+}
+
+/* Footer */
+footer {
+  text-align: left;
+  margin-top: 4rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Mobile Optimization */
+@media screen and (max-width: 600px) {
+  body {
+    padding: 1rem;
+    font-size: 14px;
+  }
+
+  nav a {
+    display: block;
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+}
