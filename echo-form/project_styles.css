@@ -101,9 +101,5 @@ footer {
   h3 {
     font-size: 1rem;
   }
- 
-  img.responsive-gif {
-    width: auto;
-    max-width: 600px;
-  }
+
 }
