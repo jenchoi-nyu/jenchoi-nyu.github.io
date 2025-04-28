@@ -56,12 +56,11 @@ p {
 }
 
 img.responsive-gif {
-  width: 100vw; /* full viewport width */
-  align-item: left;
-  height: auto;
-  max-width: 600px; /* Optional: limit the maximum size on large screens */
-  display: block;
-  margin: 20px auto;
+  width: 100%;
+      height: auto;
+      max-width: 600px; /* Optional: limit the maximum size on large screens */
+      display: block;
+      margin: 20px auto;
     }
 
 a {
@@ -101,5 +100,10 @@ footer {
 
   h3 {
     font-size: 1rem;
+  }
+ 
+  img.responsive-gif {
+    width: auto;
+    max-width: 600px;
   }
 }
