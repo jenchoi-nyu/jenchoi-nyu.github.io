@@ -55,13 +55,13 @@ p {
 
 }
 
- img.responsive-gif {
-      width: 100vw; /* full viewport width */
-      height: auto;
-      display: block;
-      max-width: 600px; /* Optional: limit the maximum size on large screens */
-      display: block;
-      margin: 20px auto;
+img.responsive-gif {
+  width: 100vw; /* full viewport width */
+  align-item: center;
+  height: auto;
+  max-width: 600px; /* Optional: limit the maximum size on large screens */
+  display: block;
+  margin: 20px auto;
     }
 
 a {
