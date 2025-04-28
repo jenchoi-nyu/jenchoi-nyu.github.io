@@ -55,14 +55,13 @@ p {
 
 }
 
-img.responsive-gif {
-  width: 100%;
+ img.responsive-gif {
+      width: 100%;
       height: auto;
       max-width: 600px; /* Optional: limit the maximum size on large screens */
       display: block;
       margin: 20px auto;
     }
-
 a {
   color: #000;
   text-decoration: underline;
