@@ -56,8 +56,9 @@ p {
 }
 
  img.responsive-gif {
-      width: 100%;
+      width: 100vw; /* full viewport width */
       height: auto;
+      display: block;
       max-width: 600px; /* Optional: limit the maximum size on large screens */
       display: block;
       margin: 20px auto;
