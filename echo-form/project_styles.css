@@ -81,6 +81,14 @@ footer {
   color: #555;
 }
 
+hr {
+  border: none;
+  height: 1px;
+  background-color: #ccc;
+  margin: 40px 0;
+}
+
+
 /* Mobile Optimization */
 @media screen and (max-width: 600px) {
   body {
